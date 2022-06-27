@@ -1,0 +1,199 @@
+/* Цвет основного текста #212121 */
+/* Цвет вторичного тексат #757575 */
+/* Цвет текста телефона и почты в футере rgba(255, 255, 255, 0.6) */
+/* Белый цвет #FFFFFF */
+/* Цвет акцентированных элементов #2196F3 */
+/* Цвет фона футера #2F303A */
+
+:root {
+    --brend-color: #2196F3;
+    --white: #fff;
+    --main-text-color: #212121;
+    --second-text-color: #757575;
+    --color-text-footer: rgba(255, 255, 255, 0.6);
+    --footer-color: #2F303A;
+    --button-background: #F5F4FA;
+}
+
+/* Общие стили для тега боди */
+body{
+    font-family: Roboto, sans-serif;
+    color: var(--main-text-color)
+}
+
+
+/* Цвет половины логотипа */
+.logo-header {
+    color: var(--main-text-color);
+}
+
+/* Убираем в списках точки, Репета показал - прикольно!*/
+ul {
+    list-style: none;
+
+}
+.logo {   
+        font-family: 'Raleway';
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.2;
+        letter-spacing: 0.03em;
+        color: var(--brend-color);
+        text-decoration: none;
+}
+/* HADER */
+.link {
+    text-decoration: none;
+}
+/* Навигация */
+.site-nav a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--main-text-color);
+}
+
+.site-nav .link.current {
+    color: var(--brend-color);
+}
+
+.auth-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--second-text-color);
+}
+
+.auth-link:hover, 
+.auth-link:focus {
+    color: var(--brend-color);
+}
+
+.filter-button {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+    background-color: var(--button-background);
+    cursor: pointer;
+}
+
+.filter-button.filter:hover,
+.filter-button.filter:focus
+ {
+    background-color: var(--brend-color);
+    color: #fff;
+}
+/* Область карточек */
+.card-title {
+font-weight: 700;
+font-size: 18px;
+line-height: 2;
+letter-spacing: 0.06em;
+color: var(--main-text-color);
+}
+
+.card-filter {
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+    color: var(--second-text-color);
+}
+
+/* Footer */
+
+.background-footer {
+    background-color: var(--footer-color);
+}
+
+.logo-footer {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.adress {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: var(--white);
+    font-style: normal;
+}
+
+.footer-auth {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: var(--color-text-footer);
+    text-decoration: none;
+}
+
+.footer-auth:hover,
+.footer-auth:focus {
+    color: var(--brend-color);
+}
+
+/* index.html MAIN*/
+/* кнопка героя */
+.hero {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: #2F303A;
+}
+
+.hero-button {
+    font-family: inherit;
+    background-color: var(--brend-color);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    color: var(--white);
+    cursor: pointer;
+}
+/* преимущества */
+.advanteges-h2 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-text-color);
+}
+
+.advanteges-p {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: var(--second-text-color);
+}
+
+.info-heading {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+}
+
+.our-team-h3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+}
+
+.our-team-p {
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: var(--second-text-color);
+}
