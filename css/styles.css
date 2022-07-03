@@ -63,6 +63,8 @@ ul {
     padding: 0 15px;
     /* outline: 1px dotted red; */
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logo {   
@@ -145,6 +147,10 @@ ul {
     position: absolute;
     width: 1px;
     white-space: nowrap;
+}
+
+.filter-list {
+    display:block;
 }
 
 .filter-button-list {
@@ -285,15 +291,16 @@ color: var(--main-text-color);
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
+    gap: 30px;
 }
 .advanteges-width {
     width: 270px;
 }
 
 
-.advanteges:not(:last-child) {
+/* .advanteges:not(:last-child) {
      margin-right: 30px;
-}
+} */
 
 
 .advanteges-h2 {
@@ -331,7 +338,9 @@ color: var(--main-text-color);
 .info-link {
     display: flex;
     margin: 0;
+    padding-left: 0;
     padding-bottom: 94px;
+    gap: 30px;
 }
 
 .our-team-h3 {
@@ -363,4 +372,5 @@ color: var(--main-text-color);
     margin: 0;
     padding-bottom: 94px;
     padding-left: 0;
+    gap: 30px;
 }
