@@ -25,6 +25,12 @@ body{
     color: var(--main-text-color)
 }
 
+.container {
+    width: 1200px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* Утилитные стили */
 .section {
@@ -34,16 +40,18 @@ body{
 
 /* Стили для обнуления верхних отступов у элементов */
 h1,
-h1,
 h2,
 h3,
 h4,
 h5,
 h6,
 p {
-    margin-top: 0;
+    margin: 0;
 }
 
+img {
+    display: block;
+}
 
 /* Цвет половины логотипа */
 .logo-header {
@@ -53,19 +61,17 @@ p {
 /* Убираем в списках точки, Репета показал - прикольно!*/
 ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 
-}
-.container {
-    display: flex;
-    width: 1200px;
-    padding: 0 15px;
-    /* outline: 1px dotted red; */
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* HADER */
+
+.heder-container {
+    display: flex;
+    align-items: center;
+}
 
 .logo {   
         font-family: 'Raleway';
@@ -87,22 +93,17 @@ ul {
 }
 .nav-container {
     display: flex;
-    padding-left: 0;
     gap: 50px;
 }
-/* Вариант пробелов между лишками навигации, 
-но гап удобнее
-.nav-container li:not(:last-child) {
-    margin-right: 50px;
-} */
 
-.site-nav a {
+.nav-link {
+    display: block;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--main-text-color);
-    padding: 20px 0;
+    padding: 32px 0;
 }
 
 .site-nav .link.current {
@@ -128,7 +129,7 @@ ul {
     color: var(--brend-color);
 }
 
-.botton-line {
+.header {
     border-bottom: 1px solid #ececec;
 }
 
@@ -149,16 +150,12 @@ ul {
     white-space: nowrap;
 }
 
-.filter-list {
-    flex-direction: column;
-}
-
 .filter-button-list {
     display: flex;
     justify-content: center;
     gap: 8px;
-    margin: 0;
-    padding-top: 94px;
+    margin-bottom: 50px;
+    /* padding-top: 94px; */
 }
 
 
@@ -183,21 +180,32 @@ ul {
     background-color: var(--brend-color);
     color: #fff;
 }
+
+.active-btn {
+    background-color: var(--brend-color);
+    color: #fff;
+}
+
 /* Область карточек */
 .filter-cards {
+    display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    margin: 0;
-    padding-top: 34px;
-    padding-bottom: 94px;
+}
+
+.portfolio-wrapper {
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+    border-top: none;
 }
 
 .card-title {
-font-weight: 700;
-font-size: 18px;
-line-height: 2;
-letter-spacing: 0.06em;
-color: var(--main-text-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--main-text-color);
+    margin-bottom: 4px;
 }
 
 .card-filter {
@@ -207,24 +215,23 @@ color: var(--main-text-color);
     color: var(--second-text-color);
 }
 
-/* Footer */
-.footer-column {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 60px;
+/* FOOTER */
+
+.footer-list {
+    padding: 60px 0;
 }
+
 .background-footer {
     background-color: var(--footer-color);
 }
 
 .logo-footer {
+    display: inline-block;
     color: var(--white);
     text-decoration: none;
+    margin-bottom: 20px;
 }
 
-.adress-padding{
-    padding-left: 0;
-}
 .adress {
     font-size: 14px;
     line-height: 1.7;
@@ -241,6 +248,10 @@ color: var(--main-text-color);
     text-decoration: none;
 }
 
+.footer-mail-margin {
+    margin: 9px 0;
+}
+
 .footer-auth:hover,
 .footer-auth:focus {
     color: var(--brend-color);
@@ -250,11 +261,8 @@ color: var(--main-text-color);
 /* кнопка героя */
 
 .hero-section {
-        display: block;
-        /* width: 1200px; */
-        height: 600px;
-        background-color: #2F303A;
-        /* padding: 0 15px; */
+    background-color: #2F303A;
+    padding: 200px;
 }
 
 .hero-text {
@@ -264,18 +272,15 @@ color: var(--main-text-color);
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--white);
-    
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 30px;
-    margin: 0;
+    margin-bottom: 30px;
 
 }
 
 .hero-button {
     display: block;
     margin: 0 auto;
-
+    padding: 10px 32px;
     font-family: inherit;
     background-color: var(--brend-color);
     font-weight: 700;
@@ -284,12 +289,13 @@ color: var(--main-text-color);
     letter-spacing: 0.06em;
     color: var(--white);
     cursor: pointer;
+    border: none;
+    border-radius: 4px;
 }
 
 /* преимущества */
 .advanteges-list {
     display: flex;
-    padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
     gap: 30px;
@@ -298,12 +304,6 @@ color: var(--main-text-color);
     width: 270px;
 }
 
-
-/* .advanteges:not(:last-child) {
-     margin-right: 30px;
-} */
-
-
 .advanteges-h2 {
     font-weight: 700;
     font-size: 14px;
@@ -311,6 +311,7 @@ color: var(--main-text-color);
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--main-text-color);
+    margin-bottom: 10px;
 }
 
 .advanteges-p {
@@ -322,18 +323,16 @@ color: var(--main-text-color);
 
 .info-heading {
     margin-bottom: 50px;
-    /* padding-top: 94px; */
-
-
     font-weight: 700;
     font-size: 36px;
     line-height: 1.2;
     letter-spacing: 0.03em;
     color: var(--main-text-color);
+    text-align: center;
 }
 
-.info-column {
-    flex-direction: column;
+.section.work {
+    padding-top: 0;
 }
 
 .info-link {
@@ -350,6 +349,8 @@ color: var(--main-text-color);
     line-height: 1.2;
     letter-spacing: 0.03em;
     color: var(--main-text-color);
+    text-align: center;
+    margin-top: 30px;
 }
 
 .our-team-p {
@@ -357,15 +358,12 @@ color: var(--main-text-color);
     line-height: 1.2;
     letter-spacing: 0.03em;
     color: var(--second-text-color);
+    text-align: center;
+    margin-top: 10px;
 }
 
 .bcg {
     background-color: #F5F4FA;;
-}
-
-.team-column {
-    flex-direction: column;
-
 }
 
 .team-list {
